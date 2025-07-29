@@ -1,21 +1,8 @@
-# bun-react-tailwind-template
+# IOI.guide
 
-To install dependencies:
+IOI.guide is a series of guides to [combinatorics](https://en.wikipedia.org/wiki/Combinatorics) - a field of mathematics - in a simple, interactive and fun way. Combinatorics, for example, can be used to count premutations of a set. It is the primary subject of the [International Olympiad of Informatics](https://ioinformatics.org/), and a secondary subject in the [International Mathematical Olympiad](https://www.imo-official.org/).
 
-```bash
-bun install
-```
+## Development
 
-To start a development server:
+This web app uses bun for development. run `bun install` do install dependencies, `bun dev` to start a dev server and `bun start` for prod. If you want to use Electron, first build the application using the `bun run build` command.
 
-```bash
-bun dev
-```
-
-To run for production:
-
-```bash
-bun start
-```
-
-This project was created using `bun init` in bun v1.2.4. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
