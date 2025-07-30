@@ -12,10 +12,10 @@ export default function Header() {
     <div className="bg-gray-950 h-16 flex">
       <Link
         to=""
-        className={`h-full p-2 flex justify-center items-center hover:text-shadow-md px-4 transition ${
+        className={`h-full p-2 flex justify-center items-center hover:text-shadow-md px-4 transition text-white ${
           location.pathname == "/"
-            ? "bg-gray-200 text-black hover:bg-white"
-            : "hover:bg-gray-200 text-white hover:text-black "
+            ? "bg-gray-800 text-black hover:bg-gray-700"
+            : "hover:bg-gray-700"
         }`}
       >
         <div className="text-2xl">IOI.guide</div>
@@ -30,18 +30,18 @@ export default function Header() {
         <div
           className={`size-8 ${
             showDropdown ? "rounded-t" : "rounded"
-          } bg-gray-200 text-gray-800 flex justify-center items-center`}
+          } bg-gray-100 text-gray-800 flex justify-center items-center`}
         >
           {language}
         </div>
         {showDropdown && (
-          <div className="absolute w-8 top-12 text-gray-700">
+          <div className="absolute w-8 top-12 text-gray-700 border-t border-gray-300 shadow-2xl">
             {Object.keys(localization).map((v) => (
               <div
                 onClick={() => {
                   setLanguage(v as keyof typeof localization);
                 }}
-                className="size-8 last:rounded-b not-last:border-b flex justify-center items-center bg-gray-300 border-gray-400"
+                className="size-8 last:rounded-b not-last:border-b flex justify-center items-center bg-gray-200 hover:bg-gray- transition100 border-gray-300"
               >
                 {v}
               </div>
