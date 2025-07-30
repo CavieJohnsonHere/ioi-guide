@@ -1,6 +1,9 @@
 import { serve } from "bun";
 import index from "./index.html";
-import renderContent from "./backend/renderContent";
+import getContent from "./backend/getContent";
+
+// Get the hashes for the content so we can check them later.
+const hashes = await Bun.file("./src/backend/content/hashes.json").json()
 
 const server = serve({
   routes: {
@@ -8,7 +11,7 @@ const server = serve({
     "/*": index,
 
     // API to recive the content of different
-    "/content/:page": (req) => renderContent(req.params.page)
+    "/content/:page": (req) => getContent(req.params.page, hashes)
   },
 
   development: process.env.NODE_ENV !== "production",
