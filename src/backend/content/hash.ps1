@@ -1,21 +1,16 @@
-# Relative folder containing markdown files (current directory)
+# Folder containing markdown files (current directory)
 $folderPath = "."
-# Output JSON file path (in current directory)
 $outputFile = ".\hashes.json"
 
-# Get all markdown files in the folder
-$files = Get-ChildItem -Path $folderPath -Filter "*.md"
-
-# Create array of objects with filename and hash
-$hashObjects = foreach ($file in $files) {
-    $hash = Get-FileHash -Path $file.FullName -Algorithm SHA256
+# Get hash objects for real files
+$hashObjects = Get-ChildItem -Path $folderPath -Filter "*.md" | ForEach-Object {
     [PSCustomObject]@{
-        FileName = $file.Name
-        Hash     = $hash.Hash
+        FileName = $_.Name
+        Hash     = (Get-FileHash -Path $_.FullName -Algorithm SHA256).Hash
     }
 }
 
-# Convert the array to JSON and save to file
-$hashObjects | ConvertTo-Json -Depth 2 | Set-Content -Path $outputFile
-
-Write-Output "Hash JSON written to $outputFile"
+# Add mock entries
+$hashObjects += [PSCustomObject]@{
+    FileName = "__test_content.md"
+    Hash     = "0000000000000000000000000000000000000000000000000000000000000000"

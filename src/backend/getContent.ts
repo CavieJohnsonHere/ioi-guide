@@ -10,5 +10,7 @@ export default function (
     return new Response("Multiple hashes found", { status: 500 });
   }
 
-  return new Response(`${hash[0].Hash}`);
+  const pageFile = Bun.file(`./src/backend/content/${page}.md`);
+
+  return new Response(pageFile);
 }
