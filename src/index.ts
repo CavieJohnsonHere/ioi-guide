@@ -10,6 +10,9 @@ const server = serve({
     // Serve index.html for all routes.
     "/*": index,
 
+    // Serve assests from assets folder
+    "/assets/:asset": (req) => new Response(Bun.file(`./assets/${req.params.asset}`)),
+
     // API to recive the content of different
     "/content/:page": (req) => getContent(req.params.page, hashes)
   },
