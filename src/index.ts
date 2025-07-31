@@ -17,4 +17,8 @@ const server = serve({
   development: process.env.NODE_ENV !== "production",
 });
 
+export type APITypes = {
+  "/content/:page": string,
+};
+
 console.log(`🚀 Server running at ${server.url}`);
