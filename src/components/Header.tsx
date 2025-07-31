@@ -18,7 +18,10 @@ export default function Header() {
             : "hover:bg-gray-700"
         }`}
       >
-        <div className="text-2xl">IOI.guide</div>
+        <div className="text-lg">
+          <img src="/assets/logo-white.svg" className="inline size-10" alt="" />
+          <span className="align-bottom">.guide</span>
+        </div>
       </Link>
 
       <div
