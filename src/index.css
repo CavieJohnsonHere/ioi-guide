@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Noto Sans Arabic", "Noto Sans", sans-serif;
+}
+
 code {
   @apply block w-full;
 }
@@ -18,4 +22,17 @@ article h2 {
 
 article code {
   @apply bg-gray-950 p-5 px-6 rounded-2xl my-4 text-gray-400;
+}
+
+.animate-fade-in {
+  animation: fade-in 2s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

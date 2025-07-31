@@ -38,6 +38,7 @@ export default function Header() {
           <div className="absolute w-8 top-12 text-gray-700 border-t border-gray-300 shadow-2xl">
             {Object.keys(localization).map((v) => (
               <div
+                key={v}
                 onClick={() => {
                   setLanguage(v as keyof typeof localization);
                 }}
