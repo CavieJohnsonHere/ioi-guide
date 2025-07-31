@@ -1,10 +1,14 @@
 [
-    {
-        "FileName":  "getting-started.md",
-        "Hash":  "5BC98F974625DEF3C0DC5A0767301CC73BE4B4A5B40AC7826AD53BDCAB12B3D8"
-    },
-    {
-        "FileName":  "__test_content.md",
-        "Hash":  "228637B9780DB8035B086E4BAA6637298324817F371331FD722FC7360BF8478B"
-    }
+  {
+    "FileName": "__test_content.md",
+    "Hash": "228637B9780DB8035B086E4BAA6637298324817F371331FD722FC7360BF8478B"
+  },
+  {
+    "FileName": "en-getting-started.md",
+    "Hash": "5BC98F974625DEF3C0DC5A0767301CC73BE4B4A5B40AC7826AD53BDCAB12B3D8"
+  },
+  {
+    "FileName": "fa-getting-started.md",
+    "Hash": "CFE2AE2A61BF6E71131D9D4ABB3E7E94EA822670D9B0EA62A765C9A0CE35B368"
+  }
 ]

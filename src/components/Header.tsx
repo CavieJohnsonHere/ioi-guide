@@ -18,7 +18,7 @@ export default function Header() {
             : "hover:bg-gray-700"
         }`}
       >
-        <div className="text-lg">
+        <div className="text-lg dir-ltr">
           <img src="/assets/logo-white.svg" className="inline size-10" alt="" />
           <span className="align-bottom">.guide</span>
         </div>
