@@ -17,19 +17,19 @@ code {
 }
 
 article h1 {
-  @apply text-3xl font-black text-gray-200 text-center mb-2;
+  @apply text-3xl font-black text-stone-200 text-center mb-2;
 }
 
 article p {
-  @apply text-lg text-gray-300 indent-4 my-4;
+  @apply text-lg text-stone-300 indent-4 my-4;
 }
 
 article h2 {
-  @apply text-xl text-gray-200 font-bold mt-6;
+  @apply text-xl text-stone-200 font-bold mt-6;
 }
 
 article code {
-  @apply bg-gray-950 p-5 px-6 rounded-2xl my-4 text-gray-400;
+  @apply bg-stone-950 p-5 px-6 rounded-2xl my-4 text-stone-400;
 }
 
 .animate-fade-in {

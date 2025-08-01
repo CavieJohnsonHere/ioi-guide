@@ -11,8 +11,8 @@ export default function SidebarItem({
   return (
     <Link to={`guide/${children}`}>
       <div
-        className={`h-16 hover:[&>div]:bg-gray-800 p-2 text-gray-200 text-xl cursor-pointer transition ${
-          selected ? "bg-gray-800 hover:text-white" : ""
+        className={`h-16 hover:[&>div]:bg-stone-800 p-2 text-stone-200 text-xl cursor-pointer transition ${
+          selected ? "bg-stone-800 hover:text-white" : ""
         }`}
       >
         <div

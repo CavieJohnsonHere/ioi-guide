@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import useContent from "@/hooks/useContent";
 import Markdown from "react-markdown";
 import { useLocation } from "react-router";
@@ -8,23 +7,28 @@ export default function Content() {
   const { content, isLoading, error } = useContent(location!);
 
   return (
-    <div className="py-10">
-      {isLoading && (
-        <div
-          className="bg-emerald-200 text-emerald-800 p-10 rounded-2xl w-fit mx-auto shadow-emerald-500/50 animate-fade-in"
-          style={{ boxShadow: `0 0 2rem 0 var(--tw-shadow-color)` }}
-        >
-          Loading...
-        </div>
-      )}
+    <article className="w-175 mx-auto">
+      <div className="py-10">
+        {isLoading && (
+          <div
+            className="bg-emerald-200/20 text-emerald-50 p-5 rounded-2xl w-fit mx-auto shadow-emerald-500/5 animate-fade-in"
+            style={{ boxShadow: `0 0 2rem 0 var(--tw-shadow-color)` }}
+          >
+            Loading...
+          </div>
+        )}
 
-      {error as boolean && (
-        <div className="bg-red-200 text-red-800 p-10 rounded-2xl w-fit mx-auto shadow-red-500/50" style={{ boxShadow: `0 0 2rem 0 var(--tw-shadow-color)` }}>
-          {String(error)}
-        </div>
-      )}
+        {(error as boolean) && (
+          <div
+            className="bg-red-200/20 text-red-50 p-5 rounded-2xl w-fit mx-auto shadow-red-500/5"
+            style={{ boxShadow: `0 0 2rem 0 var(--tw-shadow-color)` }}
+          >
+            {String(error)}
+          </div>
+        )}
 
-      {content && <Markdown>{content}</Markdown>}
-    </div>
+        {content && <Markdown>{content}</Markdown>}
+      </div>
+    </article>
   );
 }
