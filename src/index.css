@@ -4,14 +4,6 @@
   --font-sans: "Noto Sans Arabic", "Noto Sans", sans-serif;
 }
 
-.dir-ltr {
-  direction: ltr;
-}
-
-.dir-rtl {
-  direction: rtl;
-}
-
 code {
   @apply block w-full;
 }
@@ -47,5 +39,15 @@ article code {
 
   to {
     opacity: 1;
+  }
+}
+
+@layer utilities {
+  .dir-ltr {
+    direction: ltr;
+  }
+
+  .dir-rtl {
+    direction: rtl;
   }
 }
