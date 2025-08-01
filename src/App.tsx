@@ -15,6 +15,7 @@ export function App() {
           <Sidebar />
         </div>
         <div className="grow overflow-y-scroll w-full">
+          
           <article className="w-175 mx-auto">
             <Content />
           </article>
