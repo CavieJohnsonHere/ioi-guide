@@ -1,3 +1,4 @@
+import L from "@/localization/L";
 import Button from "./Button";
 
 export default function HomePage() {
@@ -9,12 +10,12 @@ export default function HomePage() {
       </h1>
 
       <div className="text-gray-300 w-128 text-center mx-auto mt-5">
-        The easiest way to learn Combinatorics, made by passionate teachers, for passionate learners.
+        <L>hp-desc</L>
       </div>
 
       <div className="mt-4 flex justify-center gap-5">
-        <Button>Start Learning</Button>
-        <Button secondary>See what's up</Button>
+        <Button><L>hp-start-learning</L></Button>
+        <Button secondary><L>hp-see-whats-up</L></Button>
       </div>
     </div>
   );
