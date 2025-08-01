@@ -1,10 +1,16 @@
 import useContent from "@/hooks/useContent";
 import Markdown from "react-markdown";
 import { useLocation } from "react-router";
+import Game from "./Game";
+import rehypeRaw from "rehype-raw";
 
 export default function Content() {
   const location = useLocation().pathname.split("/").pop();
   const { content, isLoading, error } = useContent(location!);
+
+  const components = {
+    game: Game,
+  };
 
   return (
     <article className="w-175 mx-auto">
@@ -26,8 +32,11 @@ export default function Content() {
             {String(error)}
           </div>
         )}
-
-        {content && <Markdown>{content}</Markdown>}
+        {content && (
+          <Markdown components={components} rehypePlugins={[rehypeRaw]}>
+            {content}
+          </Markdown>
+        )}
       </div>
     </article>
   );
