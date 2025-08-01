@@ -4,6 +4,10 @@
   --font-sans: "Noto Sans Arabic", "Noto Sans", sans-serif;
 }
 
+.material-symbols-rounded {
+  @apply align-middle
+}
+
 code {
   @apply block w-full;
 }
