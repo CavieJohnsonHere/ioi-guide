@@ -13,7 +13,7 @@ export default function Button({
   ];
 
   const secondaryClasses = [
-    `bg-gray-900 hover:[&>div]:-translate-y-1.5 rounded-2xl text-white outline-offset-4 ${className}`,
+    `bg-gray-800 hover:[&>div]:-translate-y-1.5 rounded-2xl text-white outline-offset-4 ${className}`,
     `bg-gray-700 transition-all p-2 px-8 rounded-2xl -translate-y-1 active:!translate-0 ${className}`,
   ];
 
