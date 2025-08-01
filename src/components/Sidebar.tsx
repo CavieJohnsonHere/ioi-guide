@@ -14,12 +14,12 @@ export default function Sidebar() {
   const location = useLocation();
 
   return (
-    <div>
+    <nav>
       {paths.map((v) => (
         <SidebarItem key={v} selected={`/guide/${v}` == location.pathname}>
           {v}
         </SidebarItem>
       ))}
-    </div>
+    </nav>
   );
 }

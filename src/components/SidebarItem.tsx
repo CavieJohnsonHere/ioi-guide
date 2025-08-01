@@ -11,12 +11,12 @@ export default function SidebarItem({
   return (
     <Link to={`guide/${children}`}>
       <div
-        className={`h-16 hover:[&>div]:bg-stone-800 p-2 text-stone-200 text-xl cursor-pointer transition ${
+        className={`h-16 hover:[&>div]:bg-stone-800 p-2 text-stone-200 text-xl cursor-pointer transition active:[&>div]:scale-95 ${
           selected ? "bg-stone-800 hover:text-white" : ""
         }`}
       >
         <div
-          className={`h-full w-full rounded-2xl flex items-center px-4 transition ${
+          className={`h-full w-full rounded-2xl flex items-center px-4 transition-all ${
             selected ? "text-white" : ""
           }`}
         >
