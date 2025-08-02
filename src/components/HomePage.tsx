@@ -1,9 +1,36 @@
 import L from "@/localization/L";
 import Button from "./Button";
+import { useEffect, useState } from "react";
 
 export default function HomePage() {
+  const [balls, setBalls] = useState([
+    {
+      top: Math.random() * (window.innerHeight - 64),
+      left: Math.random() * (window.innerWidth - 320),
+      id: 0,
+    },
+    {
+      top: Math.random() * (window.innerHeight - 64),
+      left: Math.random() * (window.innerWidth - 320),
+      id: 1,
+    },
+    {
+      top: Math.random() * (window.innerHeight - 64),
+      left: Math.random() * (window.innerWidth - 320),
+      id: 2,
+    },
+  ]);
+
   return (
-    <div className="py-10">
+    <div className="py-10 relative">
+      {!navigator.userAgent.toLowerCase().includes("firefox") &&
+        balls.map((v) => (
+          <div
+            className="absolute size-20 bg-pink-500 blur-[200px]"
+            style={{ left: v.left, top: v.top }}
+          />
+        ))}
+
       <h1 className="text-5xl font-bold flex gap-3 justify-center dir-ltr">
         <img src="/assets/logo.svg" alt="" className="size-20" />
         <div className="leading-20 bg-clip-text text-white">.guide</div>
@@ -14,10 +41,10 @@ export default function HomePage() {
       </div>
 
       <div className="mt-8 flex justify-center gap-5">
-        <Button>
+        <Button link="/guide/getting-started">
           <L>hp-start-learning</L>
         </Button>
-        <Button secondary>
+        <Button link="/guide/getting-started" secondary>
           <L>hp-see-whats-up</L>
         </Button>
       </div>
