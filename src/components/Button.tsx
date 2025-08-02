@@ -1,6 +1,9 @@
+import { Link } from "react-router";
+
 export default function Button({
   children,
   className,
+  link,
   secondary,
   icon,
   square,
@@ -8,6 +11,7 @@ export default function Button({
 }: {
   children: React.ReactNode;
   className?: string;
+  link?: string;
   secondary?: boolean;
   icon?: boolean;
   square?: boolean;
@@ -31,11 +35,13 @@ export default function Button({
     } -translate-y-1 active:!translate-0 cursor-pointer ${className}`,
   ];
 
-  return (
+  const button = (
     <button className={secondary ? secondaryClasses[0] : primaryClasses[0]} onClick={onClick}>
       <div className={secondary ? secondaryClasses[1] : primaryClasses[1]}>
         {icon ? <span className="material-symbols-rounded">{children}</span> : children}
       </div>
     </button>
   );
+
+  return link ? <Link to={link}>{button}</Link> : button;
 }
