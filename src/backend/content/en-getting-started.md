@@ -9,7 +9,7 @@
 </div>
 
 <div>
-  <Game game="InteractiveGraph"></Game>
+  <Game game="Pie"></Game>
 </div>
 
 another one?
