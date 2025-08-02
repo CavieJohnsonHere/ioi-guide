@@ -1,21 +1,21 @@
 export default function InteractiveGraph() {
   return (
-    <div>
-      <svg
-        width="100%"
-        height="100%"
-        viewBox="0 0 100 100"
-        preserveAspectRatio="none"
-      >
-        <line
-          x1="0"
-          y1="0"
-          x2="100"
-          y2="100"
-          vector-effect="non-scaling-stroke"
-          stroke="red"
-        />
-      </svg>
+    <div className="flex">
+      <div className="w-20 flex flex-col justify-around text-gray-200">
+        <div>Hello</div>
+      </div>
+      <div className="w-20 flex flex-col justify-center text-gray-200 relative">
+        <div className="h-2">
+          <div className="border border-white -rotate-4"></div>
+        </div>
+        <div className="h-2">
+          <div className="border border-white rotate-4"></div>
+        </div>
+      </div>
+      <div className="w-20 flex flex-col justify-around text-gray-200">
+        <div>Hello</div>
+        <div>Hello</div>
+      </div>
     </div>
   );
 }
