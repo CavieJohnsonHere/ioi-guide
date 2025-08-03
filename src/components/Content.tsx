@@ -33,6 +33,7 @@ export default function Content() {
           </div>
         )}
         {content && (
+          //@ts-ignore
           <Markdown components={components} rehypePlugins={[rehypeRaw]}>
             {content}
           </Markdown>
