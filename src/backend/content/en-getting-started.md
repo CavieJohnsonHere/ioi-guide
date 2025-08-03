@@ -12,4 +12,8 @@
   <Game game="Pie"></Game>
 </div>
 
+<div>
+  <Game game="PieExplained"></Game>
+</div>
+
 another one?
