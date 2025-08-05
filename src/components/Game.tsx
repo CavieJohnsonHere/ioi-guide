@@ -2,6 +2,7 @@ import EightQueens from "./games/EightQueens";
 import FourQueens from "./games/FourQueens";
 import Pie from "./games/Pie";
 import PieExplained from "./games/PieExplained";
+import PiegonholePrincipal from "./games/PiegonholePrincipal";
 
 export default function Game({ game }: { game: string }) {
   switch (game) {
@@ -10,6 +11,7 @@ export default function Game({ game }: { game: string }) {
     // case "InteractiveGraph": return <InteractiveGraph />;
     case "Pie": return <Pie />;
     case "PieExplained": return <PieExplained />;
+    case "PHC": return <PiegonholePrincipal />;
     default: return <div className="text-red-100">Game not found</div>;
   }
 }
