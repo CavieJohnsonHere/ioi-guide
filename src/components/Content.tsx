@@ -16,11 +16,10 @@ export default function Content() {
     <article className="w-175 mx-auto">
       <div className="py-10">
         {isLoading && (
-          <div
-            className="bg-emerald-200/20 text-emerald-50 p-5 rounded-2xl w-fit mx-auto shadow-emerald-500/5 animate-fade-in"
-            style={{ boxShadow: `0 0 2rem 0 var(--tw-shadow-color)` }}
-          >
-            Loading...
+          <div className="mx-auto bg-pink-900/20 py-10 rounded-3xl animate-fade-in relative">
+            <div className="bg-pink-800 text-emerald-50 p-5 rounded-2xl animate-move w-fit absolute top-1/2 -translate-1/2">
+              Loading...
+            </div>
           </div>
         )}
 
