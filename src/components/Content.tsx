@@ -8,6 +8,7 @@ export default function Content() {
   const location = useLocation().pathname.split("/").pop();
   const { content, isLoading, error } = useContent(location!);
 
+  // The components that you can use in the markdown directly
   const components = {
     game: Game,
   };
@@ -32,6 +33,7 @@ export default function Content() {
           </div>
         )}
         {content && (
+          // This library's types defs are kinda ass...
           //@ts-ignore
           <Markdown components={components} rehypePlugins={[rehypeRaw]}>
             {content}
