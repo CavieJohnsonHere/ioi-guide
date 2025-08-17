@@ -34,7 +34,7 @@ export default function Content() {
         )}
         {content && (
           // This library's types defs are kinda ass...
-          //@ts-ignore
+          // @ts-ignore
           <Markdown components={components} rehypePlugins={[rehypeRaw]}>
             {content}
           </Markdown>
