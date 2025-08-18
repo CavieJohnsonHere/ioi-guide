@@ -30,7 +30,7 @@ export default function HeadrtLanguageSelector() {
                 onClick={() => {
                   setLanguage(v as keyof typeof localization);
                 }}
-                className="size-8 last:rounded-b not-last:border-b flex justify-center items-center bg-pink-200 hover:bg-pink- transition100 border-pink-300"
+                className="size-8 last:rounded-b not-last:border-b flex justify-center items-center bg-pink-200 hover:bg-pink-100 border-pink-300 transition select-none cursor-pointer"
               >
                 {v}
               </div>
