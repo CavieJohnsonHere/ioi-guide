@@ -4,5 +4,10 @@ IOI.guide is a series of guides to [combinatorics](https://en.wikipedia.org/wiki
 
 ## Development
 
-This web app uses bun for development. run `bun install` do install dependencies, `bun dev` to start a dev server and `bun start` for prod. If you want to use Electron, first build the application using the `bun run build` command.
+This web app uses [Bun](https://www.bun.sh) for development. Run `bun install` to install dependencies, `bun dev` to start a dev server with HMR and `bun start` for prod.
 
+### Electron
+
+If you wish to use Electron, first install electron using guides from all over the internet. We may have our own electron build in the future. If we do, we are going to update this guide and include Electron as a dependency.
+
+To get the application as an HTML bundle, use the `bun run build` command.
