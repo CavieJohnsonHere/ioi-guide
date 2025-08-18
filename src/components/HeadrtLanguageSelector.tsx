@@ -24,7 +24,7 @@ export default function HeadrtLanguageSelector() {
       {showDropdown && (
         <ClickAwayListener onClickAway={() => setShowDropdown(false)}>
           <div className="absolute w-8 top-12 text-pink-700 border-t border-pink-300 shadow-2xl z-50">
-            {Object.keys(localization).map((v) => (
+            {Object.keys(localization).filter(v => v != language).map(v => (
               <div
                 key={v}
                 onClick={() => {
