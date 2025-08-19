@@ -44,7 +44,7 @@ export default function HomePage() {
         <Button link="/guide/getting-started">
           <L>hp-start-learning</L>
         </Button>
-        <Button link="/guide/getting-started" secondary>
+        <Button secondary>
           <L>hp-see-whats-up</L>
         </Button>
       </div>
