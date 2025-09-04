@@ -3,31 +3,40 @@ import Button from "./Button";
 import { useEffect, useState } from "react";
 
 export default function HomePage() {
-  const [balls, setBalls] = useState([
+  const balls = [
     {
       top: Math.random() * (window.innerHeight - 64),
       left: Math.random() * (window.innerWidth - 320),
+      bg: "bg-pink-500",
       id: 0,
     },
     {
       top: Math.random() * (window.innerHeight - 64),
       left: Math.random() * (window.innerWidth - 320),
+      bg: "bg-green-500",
       id: 1,
     },
     {
       top: Math.random() * (window.innerHeight - 64),
       left: Math.random() * (window.innerWidth - 320),
+      bg: "bg-yellow-500",
       id: 2,
     },
-  ]);
+  ];
 
   return (
     <div className="py-10 relative">
+      {/* firefox's blur has a max radius so it looks terrible */}
       {!navigator.userAgent.toLowerCase().includes("firefox") &&
         balls.map((v) => (
           <div
-            className="absolute size-20 bg-pink-500 blur-[200px]"
-            style={{ left: v.left, top: v.top }}
+            className={`absolute size-20 ${v.bg}`}
+            key={v.id}
+            style={{
+              left: v.left,
+              top: v.top,
+              filter: `blur(${300 * Math.max(Math.random(), 0.5)}px)`,
+            }}
           />
         ))}
 
