@@ -69,7 +69,7 @@ export default function PigeonholePrincipal() {
           return (
             <div
               key={holeIndex}
-              className="rounded-2xl aspect-square flex items-center justify-center bg-pink-700"
+              className="rounded-2xl aspect-square flex items-center justify-center bg-stone-800"
             >
               {pigeonIndex !== -1 && (
                 <div className="text-2xl">{getEmoji(pigeonIndex)}</div>
