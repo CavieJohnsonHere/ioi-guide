@@ -22,19 +22,48 @@ export default function Content() {
     <article className="w-175 mx-auto">
       <div className="py-10 pb-25">
         {isLoading && (
-          <div className="mx-auto bg-pink-900/20 py-10 rounded-3xl animate-fade-in relative">
-            <div className="bg-pink-800 text-emerald-50 p-5 rounded-2xl animate-move w-fit absolute top-1/2 -translate-1/2">
-              <L>info-loading</L>
-            </div>
+          <div className="flex justify-center">
+            <svg width={200} height={200} viewBox="0 0 200 200">
+              <rect
+                className="loading-spinner"
+                x={50}
+                y={50}
+                width={100}
+                height={100}
+                fill="transparent"
+              />
+            </svg>
           </div>
         )}
 
         {(error as boolean) && (
-          <div
-            className="bg-red-200/20 text-red-50 p-5 rounded-2xl w-fit mx-auto shadow-red-500/5"
-            style={{ boxShadow: `0 0 2rem 0 var(--tw-shadow-color)` }}
-          >
-            {String(error)}
+          // <div
+          //   className="bg-red-200/20 text-red-50 p-5 rounded-2xl w-fit mx-auto shadow-red-500/5"
+          //   style={{ boxShadow: `0 0 2rem 0 var(--tw-shadow-color)` }}
+          // >
+          //   {String(error)}
+          // </div>
+
+          <div className="flex justify-center">
+            <svg width={100} height={200} viewBox="0 0 100 200">
+              <path
+                d="
+              M 50 50
+              L 50 125
+              "
+                className="error-glyph-line transition"
+              />
+
+              <circle
+                cx={50}
+                cy={150}
+                className="error-glyph-dot transition"
+                fill="var(--color-red-400)"
+              />
+            </svg>
+            <div className="text-red-300 text-2xl flex items-center">
+              {String(error)}
+            </div>
           </div>
         )}
         {content && (

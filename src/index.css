@@ -5,7 +5,7 @@
 }
 
 .material-symbols-rounded {
-  @apply align-middle
+  @apply align-middle;
 }
 
 code {
@@ -70,8 +70,53 @@ article code {
   }
 
   .animate-move {
-  @media (prefers-reduced-motion: no-preference) {
-    animation: move 20s infinite;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: move 20s infinite;
+    }
   }
 }
+
+.loading-spinner {
+  stroke: var(--color-purple-200);
+  animation: loading-spinner-animation 2s infinite linear;
+  stroke-width: 1rem;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s, stroke-dasharray 1s;
+  stroke-dashoffset: 0px;
+  rx: 10px;
+  ry: 10px;
+  stroke-dasharray: 0, 0;
+}
+
+.error-glyph-line {
+  stroke: var(--color-red-400);
+  stroke-width: 1rem;
+  stroke-linecap: round;
+}
+
+.error-glyph-dot {
+  stroke: var(--color-red-400);
+  stroke-linecap: round;
+  r: 0.5rem;
+}
+
+@keyframes loading-spinner-animation {
+  from {
+    stroke-dasharray: 0, 1rem;
+    rx: 80px;
+    ry: 80px;
+    stroke-dashoffset: -40px;
+  }
+  50% {
+    rx: 20px;
+    ry: 20px;
+    stroke-dasharray: 2, 2rem;
+    stroke-dashoffset: -80px;
+  }
+  to {
+    stroke-dasharray: 0, 1rem;
+    rx: 80px;
+    ry: 80px;
+    stroke-dashoffset: -120px;
+  }
 }
